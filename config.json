@@ -1,0 +1,4 @@
+{
+    "connetionstring": "host=localhost user=postgres password=root dbname=crud_rest port=5432 sslmode=disable",
+    "port": 9200
+}
