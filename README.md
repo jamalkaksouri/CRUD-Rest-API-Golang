@@ -1,4 +1,4 @@
-![CRUD in GoLang REST API with Mux & GORM & Postgres DB]
+![CRUD in GoLang REST API with Mux & GORM & Postgres DB](https://user-images.githubusercontent.com/12379287/165097903-52154fde-cf22-417b-8f87-511c2a7f9412.png)
 
 ## Features
 
