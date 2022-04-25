@@ -21,6 +21,7 @@
 - gorilla/mux for routing
 - gorm for ORM
 - viper for enviroment configuration
+- Fake Data Generator for Struct 
 
 ## Run Program
 
@@ -29,5 +30,5 @@ Run the following steps:
 `go install`
 
 1. Create a database named crud_rest in Postgres
-2. In the main project directory, execute the following command:
-   `go run .`
+2. `go run database/seeder/seeder.go` Seed the database.
+3. `go run main.go` Run the app in Dev mode.
