@@ -16,7 +16,7 @@
 
 ## Tools
 
-- Go version 1.8.1
+- Go version 1.18.1
 - Postgres for Database
 - gorilla/mux for routing
 - gorm for ORM
