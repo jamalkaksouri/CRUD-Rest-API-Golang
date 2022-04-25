@@ -3,22 +3,23 @@ package controllers
 import (
 	"encoding/json"
 	"golang-crud-rest-api/database"
-	"golang-crud-rest-api/entities"
+	"golang-crud-rest-api/models"
 	"net/http"
 
 	"github.com/gorilla/mux"
 )
 
 func CreateProduct(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	var product entities.Product
+	product := models.Product{}
 	json.NewDecoder(r.Body).Decode(&product)
 	database.Instance.Create(&product)
+	json.NewEncoder(w).Encode(product)
+	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(product)
 }
 
 func checkIfProductExists(productId string) bool {
-	var product entities.Product
+	product := models.Product{}
 	database.Instance.First(&product, productId)
 
 	return product.Id != 0
@@ -31,14 +32,14 @@ func GetProductById(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var product entities.Product
+	var product models.Product
 	database.Instance.First(&product, productId)
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(product)
 }
 
 func GetProducts(w http.ResponseWriter, r *http.Request) {
-	var products []entities.Product
+	products := []models.Product{}
 	database.Instance.Find(&products)
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
@@ -52,7 +53,7 @@ func UpdateProduct(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var product entities.Product
+	product := models.Product{}
 	database.Instance.First(&product, productId)
 	json.NewDecoder(r.Body).Decode(&product)
 	database.Instance.Save(&product)
@@ -68,7 +69,7 @@ func DeleteProduct(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	var product entities.Product
+	product := models.Product{}
 	database.Instance.Delete(&product, productId)
 	json.NewEncoder(w).Encode("Product Deleted Successfuly!")
 }

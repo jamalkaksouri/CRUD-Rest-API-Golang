@@ -1,7 +1,7 @@
 package database
 
 import (
-	"golang-crud-rest-api/entities"
+	"golang-crud-rest-api/models"
 	"log"
 
 	"gorm.io/driver/postgres"
@@ -22,6 +22,6 @@ func Connect(connectionString string) {
 }
 
 func Migrate() {
-	Instance.AutoMigrate(&entities.Product{})
+	Instance.AutoMigrate(&models.Product{})
 	log.Println("Database Migration Completed...")
 }
