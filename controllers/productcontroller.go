@@ -10,11 +10,10 @@ import (
 )
 
 func CreateProduct(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
 	product := models.Product{}
 	json.NewDecoder(r.Body).Decode(&product)
 	database.Instance.Create(&product)
-	json.NewEncoder(w).Encode(product)
-	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(product)
 }
 
