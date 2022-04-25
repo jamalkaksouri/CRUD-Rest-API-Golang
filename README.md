@@ -1,4 +1,4 @@
-# Implementing CRUD in GoLang REST API with Mux & GORM & Postgres DB
+# Simple CRUD in GoLang REST API with Mux & GORM & Postgres DB
 
 ![CRUD in GoLang REST API with Mux & GORM & Postgres DB](https://user-images.githubusercontent.com/12379287/165107926-91a34de1-19b1-4ef6-95da-0642d0fa28ae.png)
 
