@@ -21,7 +21,7 @@
 - gorilla/mux for routing
 - gorm for ORM
 - viper for enviroment configuration
-- Fake Data Generator for Struct 
+- faker for fake data generator for Struct 
 
 ## Run Program
 
