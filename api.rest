@@ -7,7 +7,7 @@ content-type: application/json
 {
     "name": "Asus M14PUK",
     "description": "Loptop",
-    "price": 100.00
+    "price": 4500.00
 }
 
 ###
@@ -29,9 +29,9 @@ PUT http://{{host}}/api/products/2 HTTP/1.1
 content-type: application/json
 
 {
-    "name": "updated-product",
+    "name": "Sony LLW20",
     "description": "new loptop",
-    "price": 100.00
+    "price": 8000.00
 }
 
 ###
