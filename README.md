@@ -26,7 +26,7 @@
 ## Run Program
 
 Run the following steps:
-`git clone github.com/CRUD-Rest-API-Golang/`
+git clone `https://github.com/CRUD-Rest-API-Golang/`
 `go install`
 
 1. Create a database named crud_rest in Postgres
