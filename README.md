@@ -26,9 +26,8 @@
 ## Run Program
 
 Run the following steps:
-git clone `https://github.com/CRUD-Rest-API-Golang/`
-`go install`
-
-1. Create a database named crud_rest in Postgres
-2. `go run database/seeder/seeder.go` Seed the database.
-3. `go run main.go` Run the app in Dev mode.
+1. git clone `https://github.com/CRUD-Rest-API-Golang/`
+2. `go install`
+3. Create a database named crud_rest in Postgres
+4. `go run database/seeder/seeder.go` Seed the database.
+5. `go run main.go` Run the app in Dev mode.
