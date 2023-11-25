@@ -17,6 +17,13 @@ func main() {
 
 	router := mux.NewRouter().StrictSlash(true)
 
+	c := cors.New(cors.Options{
+        AllowedOrigins: []string{"http://localhost:8000"},
+        AllowCredentials: true,
+    })
+
+    handler := c.Handler(router)
+
 	RegisterProductRoutes(router)
 
 	log.Printf("Starting server on port %s", AppConfig.Port)
