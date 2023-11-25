@@ -1,4 +1,4 @@
 {
-    "connetionString": "host=localhost user=postgress password=hPbbwxZshZCKEp5V90weloMV1dCb28YU dbname=crud_rest port=5432 sslmode=disable",
+    "connetionString": "postgres://postgress:hPbbwxZshZCKEp5V90weloMV1dCb28YU@dpg-clguggug1b2c73ab5m50-a/crud_rest",
     "applicationPort": 9200
 }
