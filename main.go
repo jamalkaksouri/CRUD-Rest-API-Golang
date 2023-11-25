@@ -18,7 +18,7 @@ func main() {
 	router := mux.NewRouter().StrictSlash(true)
 
 	c := cors.New(cors.Options{
-        AllowedOrigins: []string{"http://localhost:8000"},
+        AllowedOrigins: []string{"http://localhost:5173"},
         AllowCredentials: true,
     })
 
