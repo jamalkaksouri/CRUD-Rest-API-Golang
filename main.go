@@ -20,7 +20,7 @@ func main() {
 	router := mux.NewRouter().StrictSlash(true)
 
 	c := cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://localhost:5173", "http://localhost:4173"},
+		AllowedOrigins:   []string{"http://localhost:5173", "http://localhost:4173", "https://front-w6cb.onrender.com"},
 		AllowCredentials: true,
 	})
 
